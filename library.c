@@ -1,37 +1,34 @@
 #include "library.h"
 
 #include <stdio.h>
-#include <memory.h>
 
 void array_processing(
-	void* data,
+	uint8_t* data,
 	int data_max_len,
 	int* data_used_len,
-	void* result_out,
+	uint8_t* result_out,
 	int result_max_len,
 	int* result_used_len)
 {
-	double len_m_bytes = data_max_len / (1024 * 1024);
-
-	if (len_m_bytes < 500)
+	if (data_max_len < 500000)
 	{
 		*data_used_len = 0;
-		return;
-	}
-	else if (len_m_bytes > 1000) 
-	{
-		*data_used_len = -1;
+		*result_used_len = 0;
 		return;
 	}
 
-	char bytes_array[data_max_len];
-
-	for (int i = 0; i < data_max_len; i++)
+	if (result_max_len < 100000)
 	{
-		bytes_array[i] = ((char*)data)[i];
-		*data_used_len += i;
+		*data_used_len = 0;
+		*result_used_len = -1;
+		return;
+	}
+
+	*data_used_len = 500000;
+
+	for (int i = 0; i < 100000; i++)
+	{
+		result_out[i] = data[i];
 		*result_used_len += i;
 	}
-
-	result_out = bytes_array;
 }

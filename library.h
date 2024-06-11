@@ -1,13 +1,13 @@
 #ifndef ARRAY_PROCESSING_LIBRARY_H
 #define ARRAY_PROCESSING_LIBRARY_H
 
-#include <glob.h>
+#include <stdint.h>
 
 void array_processing(
-	void* data,
+	uint8_t* data,
 	int data_max_len,
 	int* data_used_len,
-	void* result_out,
+	uint8_t* result_out,
 	int result_max_len,
 	int* result_used_len);
 
