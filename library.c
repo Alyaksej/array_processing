@@ -10,7 +10,7 @@ void array_processing(
 	int result_max_len,
 	int* result_used_len)
 {
-	if (data_max_len < 500000)
+	if (data_max_len < 500000000)
 	{
 		*data_used_len = 0;
 		*result_used_len = 0;
@@ -24,11 +24,11 @@ void array_processing(
 		return;
 	}
 
-	*data_used_len = 500000;
+	*data_used_len = 500000000;
 
 	for (int i = 0; i < 100000; i++)
 	{
 		result_out[i] = data[i];
-		*result_used_len += i;
 	}
+	*result_used_len = 100000;
 }
