@@ -2,7 +2,7 @@
 
 ## Library description
 
-This library is written on C and it's used to process data in the form of a byte array of uint_8 format.
+This library is written on C and it's used to process data of byte array of uint_8 format.
 
 Description of the function input parameters 
 
