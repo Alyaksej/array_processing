@@ -23,13 +23,9 @@ void array_processing(
 
 ## Make library
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps:
-
 1. Clone repository from Gitlab using command in terminal _git clone git@github.com:Alyaksej/array_processing.git_
 2. cd path/to/folder/array_processing
 3. mkdir build
 4. cd build
 5. cmake ..
 6. make
-
-#ADD COPIING LIBRARY TO FOLDER
