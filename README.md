@@ -16,10 +16,10 @@ void array_processing(
 
 - data - pointer to an array of uint8_t type that holds the input data to be processed
 - data_max_len - integer specifying the maximum length of the data array
-- data_used_len - pointer to an integer that will be updated with the actual length of the data used during processing
+- data_used_len - pointer to an integer that indicates the length of the part of the data array used during processing.
 - result_out - pointer to an array of uint8_t type where the processed data will be stored
 - result_max_len - integer specifying the maximum length of the result_out array
-- result_used_len - pointer to an integer that will be updated with the actual length of the result data stored in result_out
+- result_used_len - pointer to an integer that shows the actual length of the result_out array.
 
 ## Make library
 
